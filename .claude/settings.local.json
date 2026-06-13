@@ -24,7 +24,16 @@
       "Bash(git init *)",
       "Bash(git checkout *)",
       "Bash(git branch *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(brew install *)",
+      "Bash(command -v gh)",
+      "Bash(gh --version)",
+      "Bash(cp __TRACKED_VAR__/app/page.tsx src/app/page.tsx)",
+      "Bash(cp __TRACKED_VAR__/components/site/navbar.tsx src/components/site/navbar.tsx)",
+      "Bash(cp __TRACKED_VAR__/components/site/hero.tsx src/components/site/hero.tsx)",
+      "Bash(cp __TRACKED_VAR__/components/site/about.tsx src/components/site/about.tsx)",
+      "Bash(cp __TRACKED_VAR__/components/site/trusted-by.tsx src/components/site/trusted-by.tsx)",
+      "Bash(git -c user.name=Adel -c user.email=xeadel1@gmail.com commit -q -m ' *)"
     ]
   }
 }
