@@ -1,0 +1,160 @@
+/* ==========================================================================
+   SPECIMEN WALL HERO  —  append this whole block to the END of
+   src/app/site.css  (it replaces the old ".hero / .splash" hero styles,
+   but you can leave those in place; the new hero uses its own classes).
+   ========================================================================== */
+
+/* process colours used by the CMYK card (the rest already exist in :root) */
+:root {
+  --cyan: #08a3c2;
+  --magenta: #d62b76;
+  --yellow: #f0bd1c;
+}
+
+.hero-spec {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 84px 1.25rem 2rem;
+  background: radial-gradient(125% 120% at 50% 0%, #fffdf7 0%, var(--paper) 52%, #ece3d1 100%);
+  --mx: 0;
+  --my: 0;
+}
+
+/* baseline grid */
+.spec-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  background-image:
+    linear-gradient(rgba(34, 61, 121, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 61, 121, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* crop marks */
+.spec-crop {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.spec-crop.tl { top: 28px; left: 28px; border-left: 1.5px solid var(--ink); border-top: 1.5px solid var(--ink); }
+.spec-crop.tr { top: 28px; right: 28px; border-right: 1.5px solid var(--ink); border-top: 1.5px solid var(--ink); }
+.spec-crop.bl { bottom: 28px; left: 28px; border-left: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
+.spec-crop.br { bottom: 28px; right: 28px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
+
+/* paint accents */
+.spec-paint {
+  position: absolute;
+  height: auto;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+.spec-paint.p1 { top: -4%; right: 22%; width: 300px; opacity: 0.3; animation: spec-drift 11s ease-in-out infinite; }
+.spec-paint.p2 { bottom: -6%; left: 24%; width: 280px; opacity: 0.28; animation: spec-drift 13s ease-in-out infinite reverse; }
+
+/* parallax wrappers (read --mx / --my from the section) */
+.spec-para {
+  position: absolute;
+  z-index: 3;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+.para-tl { top: 12%; left: 5%; transform: translate3d(calc(var(--mx) * 22px), calc(var(--my) * 18px), 0); }
+.para-tr { top: 14%; right: 6%; transform: translate3d(calc(var(--mx) * -20px), calc(var(--my) * 16px), 0); }
+.para-bl { bottom: 14%; left: 7%; transform: translate3d(calc(var(--mx) * 16px), calc(var(--my) * -14px), 0); }
+.para-br { bottom: 15%; right: 7%; transform: translate3d(calc(var(--mx) * -18px), calc(var(--my) * -16px), 0); }
+.para-seal {
+  top: 9%;
+  left: 50%;
+  z-index: 4;
+  pointer-events: none;
+  transform: translate3d(calc(-50% + var(--mx) * 10px), calc(var(--my) * 8px), 0);
+}
+
+/* idle float */
+.spec-bob.bob-a { animation: spec-floatA 7.2s ease-in-out infinite; }
+.spec-bob.bob-b { animation: spec-floatB 8s ease-in-out infinite; }
+.spec-bob.bob-c { animation: spec-floatC 7.6s ease-in-out infinite; }
+.spec-bob.bob-d { animation: spec-floatD 8.4s ease-in-out infinite; }
+
+/* artifact cards */
+.spec-card {
+  background: var(--paper-card);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 26px 52px -28px rgba(20, 22, 42, 0.6);
+}
+.spec-card-label {
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+
+.spec-cmyk { display: flex; gap: 9px; }
+.spec-cmyk > div { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.spec-chip { width: 32px; height: 46px; border-radius: 5px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
+.spec-chip-l { font-weight: 800; font-size: 11px; color: var(--ink-soft); }
+
+.spec-type { display: flex; align-items: baseline; gap: 14px; }
+.spec-aa { font-family: var(--font-display), serif; font-weight: 600; font-size: 58px; line-height: 0.9; color: var(--ink); }
+.spec-type-name { font-family: var(--font-display), serif; font-style: italic; font-weight: 500; font-size: 19px; color: var(--red); }
+.spec-type-meta { font-weight: 700; font-size: 10px; letter-spacing: 0.14em; color: var(--ink-faint); margin-top: 3px; }
+.spec-type-glyphs { margin-top: 12px; font-family: var(--font-display), serif; font-size: 13px; color: var(--ink-soft); }
+
+.spec-pantone { width: 150px; border-radius: 5px; box-shadow: 0 26px 52px -26px rgba(20, 22, 42, 0.6); }
+.spec-pantone-top { height: 100px; background: var(--red); border-radius: 5px 5px 0 0; }
+.spec-pantone-body {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  padding: 9px 11px 11px;
+}
+.spec-pantone-brand { font-weight: 800; font-size: 9px; letter-spacing: 0.1em; color: var(--ink); }
+.spec-pantone-code { font-weight: 800; font-size: 15px; color: var(--ink); margin-top: 3px; }
+.spec-pantone-name { font-weight: 600; font-size: 10px; color: var(--ink-faint); margin-top: 1px; }
+
+.spec-seal svg { animation: spec-spin 22s linear infinite; }
+
+/* center content */
+.spec-content {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  pointer-events: none;
+}
+.spec-content .kicker { margin-bottom: 0; }
+.spec-logo { width: 48px; height: auto; margin-bottom: 14px; filter: drop-shadow(0 10px 22px rgba(20, 22, 42, 0.22)); }
+.spec-name { margin-top: 16px; font-size: clamp(2.6rem, 7vw, 6rem); }
+.spec-cta { pointer-events: auto; margin-top: 28px; }
+
+/* the floating cards should stand down on small screens */
+@media (max-width: 860px) {
+  .spec-para { display: none; }
+  .spec-content { position: relative; min-height: calc(100svh - 120px); }
+}
+
+@keyframes spec-floatA { 0%, 100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-13px) rotate(-4.5deg); } }
+@keyframes spec-floatB { 0%, 100% { transform: translateY(0) rotate(5deg); } 50% { transform: translateY(-11px) rotate(3.4deg); } }
+@keyframes spec-floatC { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-14px) rotate(-2.4deg); } }
+@keyframes spec-floatD { 0%, 100% { transform: translateY(0) rotate(6deg); } 50% { transform: translateY(-12px) rotate(4.4deg); } }
+@keyframes spec-drift { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(0, -20px) rotate(4deg); } }
+@keyframes spec-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .spec-bob, .spec-paint, .spec-seal svg { animation: none; }
+}

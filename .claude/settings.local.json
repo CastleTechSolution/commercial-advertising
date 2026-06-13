@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npx *)",
+      "Bash(mkdir -p public/assets)",
+      "Bash(cp /tmp/cca-inspect/*.png /tmp/cca-inspect/*.jpg public/assets/)",
+      "Bash(npm run *)",
+      "Bash(node *)",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(sed -n 's/^OPENROUTER_API_KEY=//p' .env.local)",
+      "Bash(curl -s https://openrouter.ai/api/v1/models)",
+      "Bash(npm install *)",
+      "Read(//Users/adel/.claude/skills/**)",
+      "Read(//Users/adel/.claude/plugins/cache/**)",
+      "Bash(command -v uipro)",
+      "Bash(npm ls *)",
+      "Bash(npm view *)",
+      "Bash(git check-ignore *)",
+      "Bash(git init *)",
+      "Bash(git checkout *)",
+      "Bash(git branch *)",
+      "Bash(git add *)"
+    ]
+  }
+}
