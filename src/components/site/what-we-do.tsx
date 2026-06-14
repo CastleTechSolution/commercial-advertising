@@ -49,16 +49,19 @@ const services: Service[] = [
   },
 ];
 
-const gallery = [
-  { img: "/assets/c1.png", tag: "Premium Print" },
-  { img: "/assets/F.jpg", tag: "Business Cards" },
-  { img: "/assets/C3.jpg", tag: "Large Format" },
-  { img: "/assets/G1.jpg", tag: "Custom Apparel" },
-  { img: "/assets/G2.jpg", tag: "Uniforms" },
-  { img: "/assets/bs.jpg", tag: "Merch" },
-  { img: "/assets/Award.png", tag: "Campaigns" },
-  { img: "/assets/Lightbox.png", tag: "Signage" },
-  { img: "/assets/S.png", tag: "Outdoor Media" },
+const categories = [
+  {
+    label: "Printing Solutions",
+    images: ["/gen/pr_card.png", "/gen/pr_flyer.png", "/gen/pr_brochure.png"],
+  },
+  {
+    label: "Garment Branding",
+    images: ["/gen/gb_labcoat.png", "/gen/gb_cafeteria.png", "/gen/gb_construction.png"],
+  },
+  {
+    label: "Advertising Solutions",
+    images: ["/gen/ad_billboard.png", "/gen/ad_signage.png", "/gen/ad_digital.png"],
+  },
 ];
 
 export function WhatWeDo() {
@@ -93,23 +96,25 @@ export function WhatWeDo() {
           ))}
         </div>
 
-        <div id="work" style={{ marginTop: "clamp(40px,6vh,64px)", paddingTop: "clamp(30px,4.5vh,46px)", borderTop: "1px solid rgba(243,238,227,0.16)" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 9, fontWeight: 700, fontSize: 12, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(243,238,227,0.6)", marginBottom: "clamp(18px,2.5vh,24px)" }}>
-            <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--red)" }} />
-            Things we&rsquo;ve made
-          </div>
-          <div className="ca-gallery" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "clamp(12px,1.4vw,18px)" }}>
-            {gallery.map((it) => (
-              <div key={it.img} className="ca-zoomwrap" style={{ position: "relative", borderRadius: 16, overflow: "hidden", aspectRatio: "4 / 3", background: "#0e0f1f" }}>
-                <div className="ca-zoom" style={{ position: "absolute", inset: 0, backgroundImage: `url('${it.img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 45%, rgba(10,11,24,0.82) 100%)" }} />
-                <span style={{ position: "absolute", left: "0.9rem", bottom: "0.9rem", color: "var(--paper)", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.04em", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ color: "var(--red)" }}>&#10022;</span>
-                  {it.tag}
+        <div id="work" style={{ marginTop: "clamp(40px,6vh,64px)", paddingTop: "clamp(30px,4.5vh,46px)", borderTop: "1px solid rgba(243,238,227,0.16)", display: "flex", flexDirection: "column", gap: "clamp(28px,4vh,42px)" }}>
+          {categories.map((cat) => (
+            <div key={cat.label}>
+              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: "clamp(14px,2vh,20px)" }}>
+                <span style={{ fontWeight: 700, fontSize: 12, letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(243,238,227,0.72)", display: "inline-flex", alignItems: "center", gap: 9, whiteSpace: "nowrap" }}>
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--red)" }} />
+                  {cat.label}
                 </span>
+                <span style={{ flex: 1, height: 1, background: "rgba(243,238,227,0.16)" }} />
               </div>
-            ))}
-          </div>
+              <div className="ca-gallery" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "clamp(10px,1.2vw,14px)" }}>
+                {cat.images.map((img) => (
+                  <div key={img} className="ca-zoomwrap" style={{ position: "relative", borderRadius: 12, overflow: "hidden", aspectRatio: "16 / 10", background: "#0e0f1f" }}>
+                    <div className="ca-zoom" style={{ position: "absolute", inset: 0, backgroundImage: `url('${img}')`, backgroundSize: "cover", backgroundPosition: "center" }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

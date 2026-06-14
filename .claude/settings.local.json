@@ -33,7 +33,9 @@
       "Bash(cp __TRACKED_VAR__/components/site/hero.tsx src/components/site/hero.tsx)",
       "Bash(cp __TRACKED_VAR__/components/site/about.tsx src/components/site/about.tsx)",
       "Bash(cp __TRACKED_VAR__/components/site/trusted-by.tsx src/components/site/trusted-by.tsx)",
-      "Bash(git -c user.name=Adel -c user.email=xeadel1@gmail.com commit -q -m ' *)"
+      "Bash(git -c user.name=Adel -c user.email=xeadel1@gmail.com commit -q -m ' *)",
+      "Bash(command -v vercel)",
+      "Bash(vercel whoami *)"
     ]
   }
 }
