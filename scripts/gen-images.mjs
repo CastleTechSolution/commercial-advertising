@@ -52,7 +52,7 @@ const prompts = {
   // Printing Solutions — a matched set: business card (least info), flyer (most), brochure (more)
   pr_card: `A photorealistic angled product photo of a pair of premium business cards on a clean warm-neutral surface with soft studio lighting (landscape framing). Professional, real graphic design for a printing and advertising company in deep navy, cream and crimson-red:
 - the front card (navy) shows a small circular logo mark, "COMMERCIAL ADVERTISING", and a thin crimson accent line
-- the back card (cream) shows a tidy minimal layout: a person's name "ABEL TADESSE", the title "Brand Manager", and small contact lines "+251 912 199 953", "info@commercialad.et", "Addis Ababa" each with a tiny line icon
+- the back card (cream) shows a tidy minimal layout: a placeholder name line reading "MANAGER'S NAME", the title "Brand Manager", and small contact lines "+251 912 199 953", "info@commercialad.et", "Addis Ababa" each with a tiny line icon
 Embossed finish, clean legible sans-serif typography, crisp print, shallow depth of field, high detail. Clearly a real finished business card (kept simple, minimal information).`,
   pr_flyer: `A photorealistic, slightly angled top-down product photo of a professionally designed single-page promotional marketing flyer printed on glossy paper, lying on a clean warm-neutral surface with soft studio lighting (landscape framing). The flyer is a polished, content-rich real graphic design for a printing and advertising company, in a deep navy, cream and crimson-red colour scheme, with this layout:
 - top-left: a small circular logo mark beside the heading "COMMERCIAL ADVERTISING"

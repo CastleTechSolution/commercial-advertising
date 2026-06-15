@@ -64,8 +64,8 @@ export function Hero() {
       <div aria-hidden style={{ position: "absolute", bottom: 24, right: 24, width: 38, height: 38, borderRight: "1.5px solid var(--ink)", borderBottom: "1.5px solid var(--ink)", opacity: 0.4 }} />
 
       {/* paint accents (from /public/gen) */}
-      <img className="ca-anim" src="/gen/splash_cyan.png" alt="" aria-hidden style={{ position: "absolute", top: "-5%", right: "23%", width: 280, height: "auto", opacity: 0.28, mixBlendMode: "multiply", animation: "ca-drift 11s ease-in-out infinite", pointerEvents: "none", zIndex: 0 }} />
-      <img className="ca-anim" src="/gen/splash_yellow.png" alt="" aria-hidden style={{ position: "absolute", bottom: "-7%", left: "25%", width: 260, height: "auto", opacity: 0.26, mixBlendMode: "multiply", animation: "ca-drift 13s ease-in-out infinite reverse", pointerEvents: "none", zIndex: 0 }} />
+      <img className="ca-anim" src="/gen/splash_cyan.webp" alt="" aria-hidden style={{ position: "absolute", top: "-5%", right: "23%", width: 280, height: "auto", opacity: 0.28, mixBlendMode: "multiply", animation: "ca-drift 11s ease-in-out infinite", pointerEvents: "none", zIndex: 0 }} />
+      <img className="ca-anim" src="/gen/splash_yellow.webp" alt="" aria-hidden style={{ position: "absolute", bottom: "-7%", left: "25%", width: 260, height: "auto", opacity: 0.26, mixBlendMode: "multiply", animation: "ca-drift 13s ease-in-out infinite reverse", pointerEvents: "none", zIndex: 0 }} />
 
       {/* TL — pen tool */}
       <div className="ca-hero-card" style={{ position: "absolute", top: "11%", left: "4.5%", transform: "translate3d(calc(var(--mx) * 22px), calc(var(--my) * 18px), 0)", transition: "transform 0.3s ease-out", zIndex: 3 }}>
@@ -133,31 +133,16 @@ export function Hero() {
         </div>
       </div>
 
-      {/* rotating seal */}
-      <div className="ca-hero-card" style={{ position: "absolute", top: "8%", left: "50%", transform: "translate3d(calc(-50% + var(--mx) * 10px), calc(var(--my) * 8px), 0)", transition: "transform 0.3s ease-out", zIndex: 4, pointerEvents: "none" }}>
-        <svg className="ca-anim" width="96" height="96" viewBox="0 0 120 120" style={{ animation: "ca-spin 22s linear infinite" }}>
-          <defs>
-            <path id="caSeal" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0" />
-          </defs>
-          <text fontFamily="var(--font-body), sans-serif" fontSize="10.5" fontWeight="700" letterSpacing="3.1" fill="var(--ink)">
-            <textPath href="#caSeal">GRAPHIC DESIGN · PRINT · BRAND · IDEAS · </textPath>
-          </text>
-          <circle cx="60" cy="60" r="13" fill="none" stroke="var(--red)" strokeWidth="1.4" />
-          <text x="60" y="65" textAnchor="middle" fontFamily="var(--font-display), serif" fontSize="16" fontWeight="600" fill="var(--red)">&#10022;</text>
-        </svg>
-      </div>
-
       {/* center content */}
       <div style={{ position: "absolute", inset: 0, zIndex: 5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px", pointerEvents: "none" }}>
-        <div style={{ display: "inline-flex", alignItems: "center", gap: 9, fontWeight: 700, fontSize: 12, letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--ink-faint)" }}>
-          <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--red)", boxShadow: "0 0 0 4px rgba(191,30,46,0.18)" }} />
-          Commercial Advertising
-        </div>
-        <h1 style={{ fontFamily: "var(--font-display), serif", fontWeight: 600, fontSize: "clamp(44px,6.4vw,92px)", lineHeight: 0.94, letterSpacing: "-0.025em", color: "var(--ink)", margin: "18px 0 0" }}>
-          Design that gets
-          <br />
-          <span style={{ color: "var(--red)", fontStyle: "italic", fontWeight: 500 }}>noticed.</span>
+        <img src="/assets/logo.png" alt="Commercial Advertising" style={{ width: 138, height: "auto", marginBottom: 26, filter: "drop-shadow(0 14px 26px rgba(20,22,42,0.2))" }} />
+        <h1 style={{ fontFamily: "'Gotham', 'Montserrat', sans-serif", fontWeight: 700, fontSize: "clamp(24px,4.4vw,62px)", lineHeight: 1.02, letterSpacing: "-0.01em", color: "var(--ink)", margin: 0, whiteSpace: "nowrap" }}>
+          Commercial <span style={{ color: "var(--red)", fontWeight: 700 }}>Advertising</span>
         </h1>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 9, fontWeight: 800, fontSize: 15, letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--navy)", marginTop: 18 }}>
+          <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--red)", boxShadow: "0 0 0 4px rgba(191,30,46,0.18)" }} />
+          Design that gets&nbsp;<span style={{ color: "var(--red)" }}>noticed</span>
+        </div>
         <div style={{ width: 54, height: 3, borderRadius: 3, background: "var(--red)", margin: "24px 0" }} />
         <p style={{ fontWeight: 600, fontSize: 14, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--ink-soft)", maxWidth: "42ch", lineHeight: 1.6, margin: 0 }}>
           Your Partner in Printing, Branding,

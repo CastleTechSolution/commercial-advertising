@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import "./site.css";
@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   title: "Commercial Advertising — Printing, Branding & Events",
   description:
     "A full-service printing, branding, advertising and event house based in Addis Ababa. We turn ideas into brands people remember.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

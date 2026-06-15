@@ -35,7 +35,32 @@
       "Bash(cp __TRACKED_VAR__/components/site/trusted-by.tsx src/components/site/trusted-by.tsx)",
       "Bash(git -c user.name=Adel -c user.email=xeadel1@gmail.com commit -q -m ' *)",
       "Bash(command -v vercel)",
-      "Bash(vercel whoami *)"
+      "Bash(vercel whoami *)",
+      "Bash(vercel link *)",
+      "Bash(vercel --prod --yes)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://commercial-advertising.vercel.app)",
+      "Bash(curl -s https://commercial-advertising.vercel.app)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://commercial-advertising.vercel.app/gen/pr_brochure.png)",
+      "Bash(sed -i '' 's#\\\\.png#.webp#g' src/components/site/what-we-do.tsx)",
+      "Bash(sed -i '' 's#\\\\.png#.webp#g' src/components/site/trusted-by.tsx)",
+      "Bash(sed -i '' 's#/gen/about\\\\.png#/gen/about.webp#' src/components/site/about.tsx)",
+      "Bash(sed -i '' 's#/gen/splash_cyan\\\\.png#/gen/splash_cyan.webp#; s#/gen/splash_yellow\\\\.png#/gen/splash_yellow.webp#' src/components/site/hero.tsx)",
+      "Bash(vercel ls *)",
+      "Bash(curl -s -o /dev/null -w \"brochure.webp -> %{http_code}, type=%{content_type}, size=%{size_download}B\\\\n\" https://commercial-advertising.vercel.app/gen/pr_brochure.webp)",
+      "Bash(curl -s -o /dev/null -w \"home -> %{http_code}\\\\n\" https://commercial-advertising.vercel.app)",
+      "Bash(pkill -f \"next build\")",
+      "Bash(git -c user.name=Adel -c user.email=xeadel1@gmail.com commit -q -m 'Hero: logo in rotating seal; business card uses placeholder name *)",
+      "Bash(git -c user.name=Adel -c user.email=xeadel1@gmail.com commit -q -m 'Hero logo in seal, placeholder card name, remove footer socials, WebP image optimization *)",
+      "Bash(echo \"exit=$?\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"card.webp -> %{http_code} \\(%{size_download}B\\)\\\\n\" https://commercial-advertising.vercel.app/gen/pr_card.webp)",
+      "Bash(pkill -f \"vercel\")",
+      "Bash(git -c user.name=\"Adel\" -c user.email=\"xeadel1@gmail.com\" commit -q -m \"Speed up deploys: exclude source PNGs + scripts from Vercel upload\")",
+      "Bash(git -c user.name=\"Adel\" -c user.email=\"xeadel1@gmail.com\" commit -q -m \"deploy pending changes\")",
+      "Bash(nohup vercel --prod --yes)",
+      "Bash(echo \"deploy launched \\(pid $!\\), committing done: $\\(git log --oneline -1\\)\")",
+      "Bash(vercel project *)",
+      "Bash(vercel --version)"
     ]
   }
 }

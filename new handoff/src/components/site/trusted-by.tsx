@@ -1,12 +1,12 @@
 const clients = [
-  { name: "Ministry of Agriculture", logo: "/assets/A.webp" },
-  { name: "Special Operations Command", logo: "/assets/D.webp" },
-  { name: "Zam Zam Bank", logo: "/assets/Z.webp" },
-  { name: "Ministry of Revenues", logo: "/assets/G.webp" },
-  { name: "Tsedey Bank", logo: "/assets/T.webp" },
-  { name: "Federal Police", logo: "/assets/P.webp" },
-  { name: "INSA", logo: "/assets/I.webp" },
-  { name: "Ministry of Health", logo: "/assets/H.webp" },
+  { name: "Ministry of Agriculture", logo: "/assets/A.png" },
+  { name: "Special Operations Command", logo: "/assets/D.png" },
+  { name: "Zam Zam Bank", logo: "/assets/Z.png" },
+  { name: "Ministry of Revenues", logo: "/assets/G.png" },
+  { name: "Tsedey Bank", logo: "/assets/T.png" },
+  { name: "Federal Police", logo: "/assets/P.png" },
+  { name: "INSA", logo: "/assets/I.png" },
+  { name: "Ministry of Health", logo: "/assets/H.png" },
 ];
 
 export function TrustedBy() {

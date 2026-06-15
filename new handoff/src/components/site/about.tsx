@@ -24,7 +24,7 @@ export function About() {
         <div className="ca-aboutwrap" style={{ position: "relative", borderRadius: 20, overflow: "hidden", background: "var(--paper-deep)", border: "1px solid var(--line)", minHeight: 400 }}>
           <div
             className="ca-aboutimg"
-            style={{ position: "absolute", inset: 0, backgroundImage: "url('/gen/about.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+            style={{ position: "absolute", inset: 0, backgroundImage: "url('/assets/C3.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
           />
         </div>
 

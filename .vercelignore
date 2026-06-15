@@ -1,3 +1,5 @@
 .env*
 handoff/
 site-handoff/
+scripts/
+public/gen/*.png
