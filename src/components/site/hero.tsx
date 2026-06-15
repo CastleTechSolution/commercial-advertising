@@ -31,6 +31,7 @@ export function Hero() {
   return (
     <section
       id="home"
+      className="ca-hero"
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       style={{
@@ -134,7 +135,7 @@ export function Hero() {
       </div>
 
       {/* center content */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px", pointerEvents: "none" }}>
+      <div className="ca-hero-content" style={{ position: "absolute", inset: 0, zIndex: 5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px", pointerEvents: "none" }}>
         <img src="/assets/logo.png" alt="Commercial Advertising" style={{ width: 138, height: "auto", marginBottom: 26, filter: "drop-shadow(0 14px 26px rgba(20,22,42,0.2))" }} />
         <h1 style={{ fontFamily: "'Gotham', 'Montserrat', sans-serif", fontWeight: 700, fontSize: "clamp(24px,4.4vw,62px)", lineHeight: 1.02, letterSpacing: "-0.01em", color: "var(--ink)", margin: 0, whiteSpace: "nowrap" }}>
           Commercial <span style={{ color: "var(--red)", fontWeight: 700 }}>Advertising</span>

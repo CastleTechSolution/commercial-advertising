@@ -1223,11 +1223,28 @@ html {
 .ca-backtop:hover { color: var(--paper); }
 
 /* responsive: stack the two-column blocks on small screens */
+/* navbar: desktop links vs. mobile hamburger */
+.ca-nav-desktop { display: flex; }
+.ca-nav-toggle { display: none; }
+@media (max-width: 979px) {
+  .ca-nav-desktop { display: none !important; }
+  .ca-nav-toggle { display: grid !important; }
+}
+
 @media (max-width: 860px) {
   .ca-hero-card { display: none !important; }
   .ca-2col { grid-template-columns: 1fr !important; }
   .ca-svc-grid { grid-template-columns: 1fr !important; }
   .ca-gallery { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* let the hero flow in natural height instead of a fixed 760px with
+     absolutely-positioned centred content (which overflowed phones) */
+  .ca-hero { min-height: auto !important; padding: 72px 20px 56px !important; }
+  .ca-hero-content {
+    position: relative !important;
+    inset: auto !important;
+    padding: 0 !important;
+  }
 }
 @media (max-width: 540px) {
   .ca-gallery { grid-template-columns: 1fr !important; }
