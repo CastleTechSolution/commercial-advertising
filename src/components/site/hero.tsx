@@ -65,8 +65,8 @@ export function Hero() {
       <div aria-hidden style={{ position: "absolute", bottom: 24, right: 24, width: 38, height: 38, borderRight: "1.5px solid var(--ink)", borderBottom: "1.5px solid var(--ink)", opacity: 0.4 }} />
 
       {/* paint accents (from /public/gen) */}
-      <img className="ca-anim" src="/gen/splash_cyan.webp" alt="" aria-hidden style={{ position: "absolute", top: "-5%", right: "23%", width: 280, height: "auto", opacity: 0.28, mixBlendMode: "multiply", animation: "ca-drift 11s ease-in-out infinite", pointerEvents: "none", zIndex: 0 }} />
-      <img className="ca-anim" src="/gen/splash_yellow.webp" alt="" aria-hidden style={{ position: "absolute", bottom: "-7%", left: "25%", width: 260, height: "auto", opacity: 0.26, mixBlendMode: "multiply", animation: "ca-drift 13s ease-in-out infinite reverse", pointerEvents: "none", zIndex: 0 }} />
+      <img className="ca-anim" src="/gen/splash_cyan.webp" alt="" aria-hidden style={{ position: "absolute", top: "-5%", right: "23%", width: 280, height: "auto", opacity: 0.28, mixBlendMode: "multiply", pointerEvents: "none", zIndex: 0 }} />
+      <img className="ca-anim" src="/gen/splash_yellow.webp" alt="" aria-hidden style={{ position: "absolute", bottom: "-7%", left: "25%", width: 260, height: "auto", opacity: 0.26, mixBlendMode: "multiply", pointerEvents: "none", zIndex: 0 }} />
 
       {/* TL — pen tool */}
       <div className="ca-hero-card" style={{ position: "absolute", top: "11%", left: "4.5%", transform: "translate3d(calc(var(--mx) * 22px), calc(var(--my) * 18px), 0)", transition: "transform 0.3s ease-out", zIndex: 3 }}>
